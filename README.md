@@ -4,11 +4,13 @@
 
 <p align="center">
   <b>Tes films, séries et chaînes en direct, dans une vraie interface de TV.</b><br>
-  Lecteur IPTV pour Android TV et projecteurs, par exr0.
+  Lecteur IPTV pour Android TV, projecteurs et Mac, par exr0.
 </p>
 
 <p align="center">
-  <a href="https://github.com/alexrdg/prizm-releases/releases/latest/download/prizm.apk"><b>Télécharger la dernière version (APK)</b></a>
+  <a href="https://github.com/alexrdg/prizm-releases/releases/latest/download/prizm.apk"><b>📺 Android TV (APK)</b></a>
+  ·
+  <a href="https://github.com/alexrdg/prizm-releases/releases/latest/download/Prizm.dmg"><b>💻 Mac (DMG)</b></a>
   ·
   <a href="https://prizm.exro.cool">Essayer la démo en ligne</a>
 </p>
@@ -21,24 +23,53 @@
 
 ---
 
+## Quelle app ?
+
+Prizm existe en **deux apps**, avec la même interface et le même catalogue. Elles se partagent tes réglages, tes listes et ta progression grâce au [compte Prizm](#3-le-compte-prizm-tv--mac), facultatif.
+
+| | 📺 **Android TV** | 💻 **Mac** |
+|---|---|---|
+| Pour | TV Android / Google TV, boîtiers, projecteurs (et téléphones, tablettes Android) | Mac avec puce Apple (M1 et suivants) |
+| Téléchargement | `prizm.exro.cool/apk` | `prizm.exro.cool/mac` |
+| Se pilote avec | La télécommande | La souris, le trackpad et le clavier |
+| Lecteur | Lecteur natif de la TV (Media3) | Lecteur Prizm dans la fenêtre, avec ffmpeg intégré |
+| Connexion au compte Prizm | QR code à scanner avec ton téléphone | E-mail et mot de passe |
+| Mises à jour | Réglages → Mise à jour | Réglages → Mise à jour |
+
+---
+
 ## Sommaire
 
+**[1. Prizm pour Android TV](#1-prizm-pour-android-tv)**
 - [Installation](#installation)
 - [Premier lancement](#premier-lancement)
 - [Fonctionnalités](#fonctionnalités)
-  - [Accueil](#accueil)
-  - [Films et séries](#films-et-séries)
-  - [Fiches, casting et filmographies](#fiches-casting-et-filmographies)
-  - [Live TV](#live-tv)
-  - [Le lecteur](#le-lecteur)
-  - [Recherche et Ma liste](#recherche-et-ma-liste)
 - [Configuration (Réglages)](#configuration-réglages)
 - [Effets légers ou complets](#effets-légers-ou-complets)
 - [Télécommande : les touches](#télécommande--les-touches)
-- [Mises à jour](#mises-à-jour)
-- [Questions fréquentes](#questions-fréquentes)
+- [Mises à jour (TV)](#mises-à-jour-tv)
+
+**[2. Prizm pour Mac](#2-prizm-pour-mac)**
+- [Installation sur Mac](#installation-sur-mac)
+- [Première ouverture : l’autorisation de macOS](#première-ouverture--lautorisation-de-macos)
+- [Ce qui change sur Mac](#ce-qui-change-sur-mac)
+- [Le lecteur sur Mac](#le-lecteur-sur-mac)
+- [Raccourcis clavier](#raccourcis-clavier)
+- [Mises à jour (Mac)](#mises-à-jour-mac)
+
+**[3. Le compte Prizm (TV + Mac)](#3-le-compte-prizm-tv--mac)**
+- [Ce qui est synchronisé](#ce-qui-est-synchronisé)
+- [Créer ton compte](#créer-ton-compte)
+- [La phrase secrète](#la-phrase-secrète)
+- [Connecter la TV (QR code)](#connecter-la-tv-qr-code)
+- [Connecter le Mac](#connecter-le-mac)
+- [Appareils connectés](#appareils-connectés)
+
+**[Questions fréquentes](#questions-fréquentes)**
 
 ---
+
+# 1. Prizm pour Android TV
 
 ## Installation
 
@@ -194,7 +225,8 @@ La même app s’adapte : le menu devient une barre en bas, les pages passent en
 
 | Rubrique | Ce qu’on y règle |
 |---|---|
-| **Compte** | Changer de compte, ajouter un compte, se déconnecter, oublier un compte. Chaque compte a ses propres listes et sa propre progression. |
+| **Compte Prizm** | Se connecter à ton [compte Prizm](#3-le-compte-prizm-tv--mac), synchroniser, phrase secrète, appareils connectés. |
+| **Compte Xtream** | Changer de compte, ajouter un compte, se déconnecter, oublier un compte. Chaque compte a ses propres listes et sa propre progression. |
 | **Apparence** | Thème (sombre, clair, comme le système), [effets légers ou complets](#effets-légers-ou-complets), outils de diagnostic. |
 | **Lecture** | Langue audio, langue et affichage des sous-titres, taille des sous-titres (détails ci-dessous). |
 | **Live TV** | Qualité lancée par défaut (la meilleure, Full HD, HD, SD), et « Recomposer Ma TV » pour changer de pays. |
@@ -294,7 +326,7 @@ Toujours dans **Apparence** :
 
 ---
 
-## Mises à jour
+## Mises à jour (TV)
 
 Depuis la 0.1.3 : **Réglages → Mise à jour**. Un point rose sur l’icône Réglages signale une nouvelle version.
 
@@ -303,6 +335,141 @@ Depuis la 0.1.3 : **Réglages → Mise à jour**. Un point rose sur l’icône R
 3. Android propose **Mettre à jour** : accepte. Prizm redémarre dans la nouvelle version, **avec toute ta configuration** (comptes, clé TMDB, langues, listes, favoris, progression).
 
 Les notes de chaque version sont sur la page [Releases](https://github.com/alexrdg/prizm-releases/releases).
+
+---
+
+---
+
+# 2. Prizm pour Mac
+
+<p align="center">
+  <img src="docs/mac-accueil.jpg" alt="Prizm sur Mac" width="900">
+</p>
+
+L’app Mac reprend **toute l’interface de la TV** : accueil, films et séries, fiches et filmographies, Live TV, recherche, Ma liste et réglages. Tout ce qui est décrit dans [Fonctionnalités](#fonctionnalités) et [Configuration](#configuration-réglages) vaut aussi sur Mac. Cette partie ne détaille que ce qui change.
+
+## Installation sur Mac
+
+1. Télécharge **[Prizm.dmg](https://github.com/alexrdg/prizm-releases/releases/latest/download/Prizm.dmg)** (raccourci : `prizm.exro.cool/mac`).
+2. Ouvre le fichier, puis glisse **Prizm** dans le dossier **Applications**.
+3. Lance Prizm depuis le Launchpad ou le dossier Applications.
+
+**Configuration requise** : un Mac avec puce Apple (M1, M2, M3, M4…) et macOS 12 Monterey ou plus récent. Tout est intégré (y compris ffmpeg), rien d’autre à installer.
+
+## Première ouverture : l’autorisation de macOS
+
+Prizm n’est pas signé par Apple (c’est un projet perso, sans compte développeur Apple payant). La **première fois**, macOS refuse de l’ouvrir avec un message du type « Apple n’a pas pu confirmer que Prizm.app ne contenait pas de logiciel malveillant ». Pour l’autoriser :
+
+1. Ferme le message (**Terminé**).
+2. Ouvre **Réglages Système → Confidentialité et sécurité**.
+3. Tout en bas, à côté de « L’ouverture de Prizm a été bloquée », clique sur **Ouvrir quand même**, puis confirme avec ton mot de passe ou Touch ID.
+
+C’est à faire **une seule fois** : ensuite Prizm s’ouvre normalement, et les mises à jour faites depuis l’app ne le redemandent pas.
+
+> Si le bouton n’apparaît pas, tente une nouvelle ouverture de Prizm puis retourne dans le réglage (il reste affiché environ une heure). Autre solution, dans le Terminal : `xattr -cr /Applications/Prizm.app`
+
+## Ce qui change sur Mac
+
+<p align="center">
+  <img src="docs/mac-bienvenue.jpg" alt="Bienvenue sur Mac" width="760">
+</p>
+
+- **Premier lancement** : saisis ton compte Xtream comme sur la TV, ou choisis **J’ai un compte Prizm** pour récupérer tes comptes Xtream déjà enregistrés (voir [Connecter le Mac](#connecter-le-mac)).
+- **À la souris** : un clic sélectionne ; survoler un champ ne le sélectionne pas. Le menu de gauche s’ouvre au survol et se replie dès que la souris le quitte.
+- **La fenêtre** : se déplace par sa bande du haut, comme n’importe quelle app, et se redimensionne librement. Le bouton vert (ou **F** dans le lecteur) passe en plein écran.
+- **Effets complets** par défaut (verre flouté, ambiance animée) : un Mac les affiche sans effort.
+
+## Le lecteur sur Mac
+
+<p align="center">
+  <img src="docs/mac-lecteur.jpg" alt="Le lecteur sur Mac" width="900">
+</p>
+
+- La vidéo se lit **dans la fenêtre de Prizm**, pas en plein écran forcé : c’est la fenêtre que tu mets en plein écran si tu veux.
+- **Tous les formats** : les fichiers que le Mac ne lit pas tels quels (son **AC3, E-AC3, DTS**, fichiers à **plusieurs pistes audio** ou avec **sous-titres intégrés**) sont convertis à la volée par ffmpeg, intégré à l’app. L’image n’est pas recompressée, seul le son est converti : aucune perte visible.
+- **Audio et sous-titres**, **épisode suivant**, **zapping du direct** : comme sur la TV. Le panneau des pistes se ferme d’un clic à côté, ou tout seul après quelques secondes.
+- **Image dans l’image** (bouton ou **P**) : la vidéo continue dans une petite fenêtre au-dessus de tes autres apps.
+- **Plein écran** (bouton ou **F**).
+
+## Raccourcis clavier
+
+| Où | Raccourci | Effet |
+|---|---|---|
+| Partout | ⌘F | Recherche |
+| Partout | ⌘, | Réglages |
+| Partout | Échap, ⌘[ | Revenir en arrière |
+| Partout | Flèches, Entrée | Naviguer comme à la télécommande |
+| Lecteur | Espace | Lecture / pause |
+| Lecteur | ← / → | Reculer / avancer de 10 secondes |
+| Lecteur | F | Plein écran |
+| Lecteur | P | Image dans l’image |
+| Lecteur | M | Couper / remettre le son |
+| Direct | ↑ / ↓, Page préc. / suiv. | Chaîne précédente / suivante |
+| Direct | Chiffres | Aller au numéro de « Ma TV » |
+
+## Mises à jour (Mac)
+
+**Réglages → Mise à jour → Installer la 0.1.x** : Prizm télécharge la nouvelle version, se ferme, se remplace et se rouvre tout seul, **avec toute ta configuration**. Pas besoin de repasser par le `.dmg`.
+
+---
+
+# 3. Le compte Prizm (TV + Mac)
+
+Le compte Prizm est **facultatif** et gratuit. Il garde tes appareils à jour entre eux : tu mets un épisode en pause sur le Mac, tu le reprends sur la TV au même endroit.
+
+## Ce qui est synchronisé
+
+| Synchronisé | Reste propre à chaque appareil |
+|---|---|
+| Comptes Xtream (chiffrés, voir ci-dessous) | Le compte Xtream actif |
+| Réglages : langues, sous-titres, thème, Live TV, clé TMDB | Effets légers ou complets, outils de diagnostic |
+| À regarder, Favoris, Personnes suivies, chaînes favorites | Recherches récentes |
+| Progression (« Continuer », épisodes vus) | Le catalogue (rechargé par chaque appareil) |
+
+La synchronisation est **instantanée** : chaque appareil allumé reçoit les changements dans la seconde.
+
+## Créer ton compte
+
+Sur **[prizm.exro.cool/compte](https://prizm.exro.cool/compte)** (depuis ton téléphone ou ton ordinateur), ou dans l’app Mac : **Réglages → Compte Prizm → Créer un compte**. Confirme ensuite ton adresse avec le lien reçu par e-mail.
+
+<p align="center">
+  <img src="docs/telephone-compte.jpg" alt="La page compte sur téléphone" width="260">
+</p>
+
+Sur la page compte : connexion par mot de passe **ou par lien reçu par e-mail** (sans mot de passe), mot de passe oublié, changement de mot de passe ou d’adresse, phrase secrète, appareils connectés, suppression du compte.
+
+## La phrase secrète
+
+Pour synchroniser tes **comptes Xtream**, Prizm te demande de choisir une **phrase secrète**, différente de ton mot de passe. Elle chiffre tes identifiants Xtream **sur l’appareil**, avant tout envoi : le serveur de Prizm ne reçoit qu’un bloc illisible, et personne d’autre que toi ne peut les lire.
+
+- Elle est demandée **une seule fois par appareil**. La TV la reçoit automatiquement par le QR code : rien à saisir à la télécommande.
+- Un mot de passe oublié ne touche pas à tes comptes Xtream.
+- **Garde-la bien** : sans elle, il faudra ressaisir tes comptes Xtream. Tu peux la changer depuis un appareil où elle est déjà ouverte.
+
+## Connecter la TV (QR code)
+
+<p align="center">
+  <img src="docs/tv-qr.jpg" alt="Le QR code dans Réglages → Compte Prizm sur la TV" width="760">
+</p>
+
+1. Sur la TV : **Réglages → Compte Prizm** (ou, au premier lancement, **J’ai un compte Prizm**).
+2. Vise le QR code avec l’**appareil photo de ton téléphone** : la page prizm.exro.cool/lier s’ouvre.
+3. Connecte-toi (ou crée ton compte), puis **Connecter**. Si ta phrase secrète n’est pas encore ouverte sur le téléphone, la page te la demande.
+4. La TV se connecte toute seule et récupère tes réglages, tes listes, ta progression et tes comptes Xtream.
+
+> Pas de téléphone sous la main ? **Me connecter avec mon e-mail** permet de saisir e-mail et mot de passe à la télécommande.
+
+## Connecter le Mac
+
+<p align="center">
+  <img src="docs/mac-compte-prizm.jpg" alt="Compte Prizm sur Mac" width="760">
+</p>
+
+**Réglages → Compte Prizm** : saisis ton e-mail et ton mot de passe, puis ta phrase secrète. Tes comptes Xtream arrivent aussitôt.
+
+## Appareils connectés
+
+Sur la page compte (et dans **Réglages → Compte Prizm**), la liste de tes TV et Mac connectés, avec leur dernière activité. **Déconnecter** un appareil (prêté, vendu, perdu) lui retire l’accès au compte : il se déconnecte et efface les comptes Xtream qu’il avait reçus.
 
 ---
 
@@ -323,8 +490,20 @@ Passe en **effets légers** (Réglages → Apparence) et mesure avec le compteur
 **Je ne trouve pas un titre de la filmographie d’un acteur.**
 S’il n’est pas chez ton fournisseur, il apparaît grisé dans « Filmographie complète ». OK l’ajoute à « À regarder », et Prizm le retrouvera s’il arrive au catalogue.
 
-**Mes identifiants sont-ils envoyés quelque part ?**
-Non. Ils restent sur l’appareil et ne servent qu’à joindre ton serveur IPTV.
+**Mes identifiants Xtream sont-ils envoyés quelque part ?**
+Sans compte Prizm : non, ils restent sur l’appareil et ne servent qu’à joindre ton serveur IPTV. Avec un compte Prizm : ils sont envoyés **chiffrés de bout en bout** avec ta phrase secrète, illisibles pour le serveur de Prizm.
+
+**Mac : « Prizm.app est endommagé » ou « Apple n’a pas pu confirmer… ».**
+C’est l’autorisation de la première ouverture, voir [Première ouverture : l’autorisation de macOS](#première-ouverture--lautorisation-de-macos).
+
+**Mac : un film met quelques secondes à démarrer.**
+C’est le cas des fichiers dont le son est converti (AC3, DTS…) : ffmpeg prépare le début du flux. Un déplacement dans la vidéo relance la conversion à la nouvelle position.
+
+**J’ai oublié ma phrase secrète.**
+Dans **Réglages → Compte Prizm** (ou sur la page compte), **J’ai oublié ma phrase secrète** efface les comptes Xtream synchronisés et te laisse en choisir une nouvelle. Les comptes déjà présents sur cet appareil repartent aussitôt, chiffrés avec la nouvelle phrase. Sur tes autres appareils, déconnecte-toi puis reconnecte-toi au compte Prizm.
+
+**L’e-mail de confirmation n’arrive pas.**
+Regarde dans les indésirables, puis utilise **Renvoyer l’e-mail de confirmation** à la connexion.
 
 ---
 
